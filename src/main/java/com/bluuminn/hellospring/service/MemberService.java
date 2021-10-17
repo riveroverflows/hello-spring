@@ -2,13 +2,16 @@ package com.bluuminn.hellospring.service;
 
 import com.bluuminn.hellospring.domain.Member;
 import com.bluuminn.hellospring.repository.MemberRepository;
-import com.bluuminn.hellospring.repository.MemoryMemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepository repository = new MemoryMemberRepository();
+    private final MemberRepository repository;
+
+    public MemberService(MemberRepository repository) {
+        this.repository = repository;
+    }
 
     /**
      * 회원가입
