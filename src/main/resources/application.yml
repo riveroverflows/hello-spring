@@ -2,6 +2,10 @@ spring:
   datasource:
     url: jdbc:h2:~/data/hello-spring;AUTO_SERVER=true
     username: sa
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
 
 ---
 
