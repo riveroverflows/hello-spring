@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./localdb/data/hello-spring
+    username: sa
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
