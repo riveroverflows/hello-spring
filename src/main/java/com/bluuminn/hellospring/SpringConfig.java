@@ -1,6 +1,7 @@
 package com.bluuminn.hellospring;
 
 import com.bluuminn.hellospring.repository.JdbcMemberRepository;
+import com.bluuminn.hellospring.repository.JdbcTemplateMemberRepository;
 import com.bluuminn.hellospring.repository.MemberRepository;
 import com.bluuminn.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,6 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository() {
-        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
