@@ -18,6 +18,7 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService service) {
         this.service = service;
+//        System.out.println("service = " + service.getClass());  -> AOP 적용 후 확인해보면 프록시 객체인 것을 알 수 있다.
     }
 
     @GetMapping("/members/new")
